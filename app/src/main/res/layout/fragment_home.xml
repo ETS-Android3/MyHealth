@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2FFFD"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/home_rounded_corner_top"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/noto_sans_bold"
+                android:text="@string/myhealth"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/noto_sans"
+                android:lineSpacingExtra="8dp"
+                android:text="@string/introduction"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <com.meetsl.scardview.SCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:layout_marginHorizontal="2dp"
+            style="@style/cardview_tab">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="@string/malaysia_overview"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/more_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="@string/more"
+                        android:textColor="@color/health_green"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/updateDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="2021-05-09"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#F4F4F4"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="0dp">
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="@string/total_confirmed_cases"
+                            android:textAlignment="center"
+                            android:textColor="@color/confirmed_orange"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/confirmedText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/confirmed_orange"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text="NEW "
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/newConfirmedText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text=" + 0"
+                                android:textColor="@color/confirmed_orange"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginEnd="200dp"
+                        android:layout_width="190dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="@string/total_recovered_cases"
+                            android:textAlignment="center"
+                            android:textColor="@color/recovered_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/recoveredText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/recovered_green"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text="NEW "
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/newRecoveredText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text=" + 0"
+                                android:textColor="@color/recovered_green"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp">
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="@string/total_active_cases"
+                            android:textAlignment="center"
+                            android:textColor="@color/active_purple"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/activeText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/active_purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text="NEW "
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/newActiveText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text=" + 0"
+                                android:textColor="@color/active_purple"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="@string/total_death_cases"
+                            android:textAlignment="center"
+                            android:textColor="@color/death_red"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/deathText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/death_red"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text="NEW "
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/newDeathText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/noto_sans"
+                                android:text=" + 0"
+                                android:textColor="@color/death_red"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.meetsl.scardview.SCardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/home_tag_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/tools" />
+        </LinearLayout>
+
+        <com.meetsl.scardview.SCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            style="@style/cardview_tab">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:paddingTop="10dp"
+                android:paddingHorizontal="8dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/selfAssessment_btn"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/self_assessment"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="8dp"
+                        android:text="@string/self_assessment"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_grey" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/travelAdvice_btn"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/travel_advice"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="8dp"
+                        android:text="@string/travel_advice"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_grey" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pandemicMap_btn"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pandemic_map"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="8dp"
+                        android:text="@string/pandemic_map"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_grey" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/FAQ_btn"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/faq"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="8dp"
+                        android:text="@string/faq"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_grey" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.meetsl.scardview.SCardView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/home_tag_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/upcoming_events" />
+
+        </LinearLayout>
+
+        <com.meetsl.scardview.SCardView
+            android:id="@+id/no_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cardview_tab">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_baseline_access_time_24"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="30dp"
+                        android:text="@string/no_upcoming_events"
+                        android:textAlignment="center"
+                        android:textColor="@color/health_green"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="10dp"
+                        android:text="@string/make_appointments_for_events"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_green"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </com.meetsl.scardview.SCardView>
+
+        <com.meetsl.scardview.SCardView
+            android:id="@+id/appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cardview_tab">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mcImage"
+                    android:layout_width="160dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mcName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="Name"
+                        android:textColor="@color/dark_grey"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/patientName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="Patient Name" />
+
+                    <TextView
+                        android:id="@+id/appointmentType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="Appointment Type" />
+
+                    <TextView
+                        android:id="@+id/appointmentDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="Appointment Date" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.meetsl.scardview.SCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/article"
+                style="@style/home_tag_text" />
+        </LinearLayout>
+
+        <com.meetsl.scardview.SCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/appointment_tab">
+            <LinearLayout
+                android:id="@+id/article1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/confirmed_orange"
+                        android:layout_margin="15dp"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/articleTitle1"
+                            android:layout_width="340dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="32dp"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark_grey"
+                            android:text="Title"/>
+                        <TextView
+                            android:id="@+id/articleDate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="14dp"
+                            android:layout_gravity="end"
+                            android:text="Date"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.meetsl.scardview.SCardView>
+
+        <com.meetsl.scardview.SCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/appointment_tab"
+            android:layout_marginBottom="60dp">
+            <LinearLayout
+                android:id="@+id/article2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/confirmed_orange"
+                        android:layout_margin="15dp"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/articleTitle2"
+                            android:layout_width="340dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="32dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/dark_grey"
+                            android:textStyle="bold"
+                            android:text="Title"/>
+                        <TextView
+                            android:id="@+id/articleDate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="14dp"
+                            android:layout_gravity="end"
+                            android:text="Date"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.meetsl.scardview.SCardView>
+    </LinearLayout>
+</ScrollView>

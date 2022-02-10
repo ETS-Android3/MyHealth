@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E7FFFB">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/health_green"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/self_assessment"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/NameText"
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/name" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/SignText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:hint="@string/enter_your_name" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/AddressText"
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/address" />
+
+            <EditText
+                android:id="@+id/addressChosen"
+                style="@style/SignText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:hint="@string/enter_your_address" />
+
+            <TextView
+                android:id="@+id/StateText"
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/state" />
+
+            <TextView
+                android:id="@+id/stateChosen"
+                style="@style/SheetText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:hint="@string/choose_your_state" />
+
+            <View
+                android:layout_marginHorizontal="33dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/light_grey"/>
+
+            <TextView
+                android:id="@+id/CityText"
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/city" />
+
+            <TextView
+                android:id="@+id/cityChosen"
+                style="@style/SheetText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:hint="@string/choose_your_city" />
+
+            <View
+                android:layout_marginHorizontal="33dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/light_grey"/>
+
+            <TextView
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/have_you_been_to_one_of_the_covid_19_affected_countries_in_the_last_14_days" />
+            <RadioGroup
+                android:id="@+id/radioGroup_q1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_yes1"
+                    style="@style/SignText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_no1"
+                    style="@style/SignText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/have_you_been_in_close_contact_with_a_confirmed_case_of_coronavirus" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_q2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_yes2"
+                    style="@style/SignText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_no2"
+                    style="@style/SignText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/are_you_currently_experiencing_symptoms_cough_shortness_of_breath_fever" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_q3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_yes3"
+                    style="@style/SignText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_no3"
+                    style="@style/SignText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TemText"
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/body_temperature" />
+
+            <EditText
+                android:id="@+id/tem"
+                style="@style/SignText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:hint="@string/enter_your_body_temperature" />
+
+            <TextView
+                android:id="@+id/confirmText"
+                style="@style/SignLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/by_submitting_i_hereby_confirm_that_the_information_i_have_given_above_is_true_and_that_i_will_comply_with_the_terms_and_conditions_outlined_above" />
+
+            <CheckBox
+                android:id="@+id/id_checkbox_confirm"
+                style="@style/SignText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/i_agree" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_confirmButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="40dp"
+                android:layout_marginHorizontal="60dp"
+                android:background="@drawable/button_rounded_corner"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:text="@string/confirm"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

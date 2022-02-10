@@ -5,6 +5,8 @@ Screenshots & details are available at:
 https://guizichen.wixsite.com/portfolio/myhealth
 
 ## Code Samples
+(Detailed code explanations are included in the comments)
+
 1. [**AppointmentFragment.java**](https://github.com/Gavin-Guiii/MyHealth/blob/main/app/src/main/java/com/RobX/MyHealth/AppointmentFragment.java) <br>It reads all the existing appointments and displays them.
 
 

@@ -4,7 +4,7 @@ An unofficial Android application developed to help the Malaysian government dea
 Screenshots & details are available at:
 https://guizichen.wixsite.com/portfolio/myhealth
 
-## Significant Code Samples
+## Code Samples
 1. [**AppointmentFragment.java**](https://github.com/Gavin-Guiii/MyHealth/blob/main/app/src/main/java/com/RobX/MyHealth/AppointmentFragment.java) <br>It reads all the existing appointments and displays them.
 
 
